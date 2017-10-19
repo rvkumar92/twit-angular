@@ -1,0 +1,14 @@
+<div ng-repeat="tweet in tweets" class="panel panel-primary">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-2">
+                <img src="" alt={{tweet.username}} class="img-rounded">
+            </div>
+            <div class="col-xs-10">
+                <p>@{{tweet.username}}</p>
+                <span class="pull-right">X</span><div>{{tweet.tweet}}</div>
+                <p>{{tweet.created}}</p>
+            </div>
+        </div>
+    </div>
+</div>

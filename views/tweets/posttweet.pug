@@ -1,0 +1,6 @@
+.panel.panel-default
+    .panel-body
+        form.tweetform(action="/tweet", method="post")
+            input.form-control#tweetbox(type="text", placeholder="What's happening?", name="tweetbox")
+            input.btn.btn-default.pull-right.tweetbtn(type="submit", value="Tweet")
+            div.tweet-counter.pull-right 140

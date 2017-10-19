@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-4 col-md-4 col-md-offset-4">
+        <h2 class="text-center">Login to Twit</h2>
+        <form name="loginform" ng-submit="loginUser()"> 
+            <div class="form-group">
+                <input type="text" name="username" ng-model="user.username" class="form-control" placeholder="Username" />
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" ng-model="user.password" placeholder="Password" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <div class="text-center"><a ui-sref="register" class="btn btn-link">Register?</a></div>
+        </form>
+    </div>
+</div>

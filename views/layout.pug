@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/angular-flash-alert/dist/angular-flash.css', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body(ng-app="twit")
+
+  block content
+      
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js")
+  script(src="/angular/angular.js")
+  script(src="/angular-ui-router/release/angular-ui-router.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="/angular-flash-alert/dist/angular-flash.js")
+  script(src="/jsSHA/src/sha512.js")
+  script(src="/javascripts/twit.js")
+  script(src="/javascripts/services/TwitFactory.js")
+  script(src="/javascripts/services/Session.js")
+  script(src="/javascripts/controllers/twitController.js")
+  script(src="/javascripts/controllers/LoginController.js")
+  script(src="/javascripts/controllers/RegisterController.js")
+  script(src="/javascripts/tweetutils.js")

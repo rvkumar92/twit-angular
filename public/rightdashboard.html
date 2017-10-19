@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h5><strong>Who to follow</strong></h5>
+        <div ng-repeat="people in users" ng-if="people.username != session.data.username">
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-10">
+                    {{people.name}} @{{people.username}}
+                </div>
+                <div class="col-xs-offset-2 col-xs-10">
+                    <button class="btn btn-outline-default" ng-click="followUser(people)" ng-if="isUnfollow(people)">Follow</button>
+                    <button class="btn btn-outline-default" ng-click="unfollowUser(people)" ng-if="isFollowing(people)">UnFollow</button>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>

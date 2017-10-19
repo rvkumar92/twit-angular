@@ -1,0 +1,10 @@
+<p>Tweets</p>
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <form>
+            <input type="text" id="tweetbox" ng-model="newTweet" placeholder="What's happening?" class="form-control" name="tweetbox" />
+            <input type="submit" value="Tweet" class="btn btn-default pull-right" ng-click="postTweet(newTweet)">
+        </form>
+        <div class="pull-right" id="tweet-counter">140</div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.panel.panel-default
+    .panel-body
+        p Have an account?
+        form(onsubmit="loginUser(event)", method="post", name="loginform")
+            .form-group
+                input.form-control(type="text", name="username", palceholder="Username")
+                input.form-control(type="password", name="password", placeholder="password")
+                button.btn.btn-primary(type="submit") Log in
