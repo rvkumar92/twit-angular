@@ -57,3 +57,15 @@ angular.module('twit').controller('TwitController',['$scope','twitFactory','Sess
     }
 
 }]);
+
+angular.module('twit').run(function($rootScope, $state, AuthService){
+        $rootScope.$on("$stateChangeStart", function(event, toState, fromState, fromParams){
+            console.log("^^^^^^^^^^");
+            console.log(toState.authenticate);
+            console.log(AuthService.isAuthenticated());
+            if(toState.authenticate && !AuthService.isAuthenticated()){
+                $state.transitionTo("login");
+                event.preventDefault();
+            }
+        })
+    });
