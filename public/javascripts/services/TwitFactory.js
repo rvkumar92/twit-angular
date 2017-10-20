@@ -7,10 +7,7 @@ angular.module('twit').factory('twitFactory', function($http){
             return {success: false, message: error}
         },
         postTweet: function(newTweet){
-            console.log('in service', newTweet);
-            return $http.post('/posttweet', newTweet).then(function(result){
-                console.log(result);
-            });
+            return $http.post('/posttweet', newTweet);//.then(this.handleSuccess, this.handleError('Unable to post new tweet'));
         },
         getAllTweet: function(){
             return $http.get('/gettweets').then(function(result){

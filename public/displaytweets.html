@@ -1,4 +1,4 @@
-<div ng-repeat="tweet in tweets" class="panel panel-primary">
+<div ng-repeat="tweet in tweets | orderBy: 'id':true" class="panel panel-primary">
     <div class="panel-body">
         <div class="row">
             <div class="col-xs-2">

@@ -80,7 +80,7 @@ var User  = (function(){
         currentUser.followers_count = currentUser.followers.length;
         people.followers.indexOf(peopleItem, 1);
         people.following_count = people.following.length;
-        
+
         users.map((single, index) => {
             if(single.username == currentUser.username){
                 users[index] = currentUser;
@@ -112,6 +112,7 @@ var User  = (function(){
             return({success: false, message: 'Username' + user.username + 'is taken'});
         }else{
             var newUser = new NewUser(user);
+            users.push(newUser);
             return({success: true, message: 'User has been created!!'});
         }
     },

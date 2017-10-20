@@ -9,11 +9,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/posttweet', function(req, res, next){
   console.log(req.body);
-  var tweet = {
-    id: Tweet.getLength() + 1,
-    tweet: req.body.text,
-    created: new Date()
-  };
+  var tweet = req.body;
+  tweet.id = Tweet.getLength() + 1,
+  tweet.created = new Date();
   Tweet.saveTweet(tweet);
   res.redirect('/');
 });
